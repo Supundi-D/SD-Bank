@@ -3,19 +3,27 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: 'login',
-        loadChildren: () => import('./feature/login/login').then(m => m.Login),
+        loadComponent: () => import('./feature/login/login').then(m => m.Login),
     },
     {
-        path: 'create',
-        loadChildren: () => import('./feature/create-account/create-account').then(m => m.CreateAccount),
+        path: 'create-account',
+        loadComponent: () => import('./feature/create-account/create-account').then(m => m.CreateAccount),
+    },
+    {
+        path: 'balance',
+        loadComponent: () => import('./feature/balance/balance').then(m => m.Balance),
     },
     {
         path: 'deposit',
-        loadChildren: () => import('./feature/deposit/deposit').then(m => m.Deposit),
+        loadComponent: () => import('./feature/deposit/deposit').then(m => m.Deposit),
     },
     {
         path: 'withdrawal',
-        loadChildren: () => import('./feature/withdrawal/withdrawal').then(m => m.Withdrawal),
+        loadComponent: () => import('./feature/withdrawal/withdrawal').then(m => m.Withdrawal),
+    },
+    {
+        path: 'transfer',
+        loadComponent: () => import('./feature/transfer/transfer').then(m => m.Transfer),
     },
 
 ];

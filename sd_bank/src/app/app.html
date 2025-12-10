@@ -1,16 +1,14 @@
-<h1 class="${hlmH1} text-align: center">Welcome To SD Bank</h1>
-<app-my-account/>
+<h1 class="${hlmH1} text-center text-yellow-400">Welcome To SD Bank</h1>
+<app-my-account />
 
-<div class="flex flex-wrap justify-center gap-6">
+<div>
+    <header class="flex justify-center mt-4 mb-6">
+        <app-navigation />
+    </header>
 
-    <app-navigation/>
-
-
-<!-- 
-<app-login/>
-<app-create-account/>
-<app-deposit/>
-<app-withdrawal/>
-<app-transfer/> -->
+    <main class=" flex-wrap justify-center">
+        <div class="w-full flex justify-center">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
 </div>
-<router-outlet></router-outlet>

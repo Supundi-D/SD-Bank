@@ -1,31 +1,46 @@
 <nav hlmNavigationMenu>
-    <ul hlmNavigationMenuList class="flex-wrap">
-        <li hlmNavigationMenuItem href="/src/app/feature/create-account/create-account.html">
-            <button hlmNavigationMenuTrigger >
-                Create Account
-            </button>
-        </li>
-        <li hlmNavigationMenuItem href="/src/app/feature/deposit/deposit.html">
+    <ul hlmNavigationMenuList class="flex-wrap gap-6">
+        <li hlmNavigationMenuItem>
             <button hlmNavigationMenuTrigger>
-                Deposit
+                <a hlmSidebarMenuButton routerLink="/login">
+                    Login
+                </a>
             </button>
         </li>
-        <li hlmNavigationMenuItem href="/src/app/feature/withdrawal/withdrawal.html">
+        <li hlmNavigationMenuItem>
             <button hlmNavigationMenuTrigger>
-                Withdrawal
+                <a hlmSidebarMenuButton routerLink="/create-account">
+                    Create Account
+                </a>
             </button>
         </li>
-        <li hlmNavigationMenuItem href="/src/app/feature/transfer/transfer.html">
+        <li hlmNavigationMenuItem>
             <button hlmNavigationMenuTrigger>
-                Transfer
+                <a hlmSidebarMenuButton routerLink="/balance">
+                    Balance
+                </a>
             </button>
         </li>
-
-<li hlmSidebarMenuItem>
-    <a hlmSidebarMenuButton href="/src/app/feature/create-account/create-account.html">
-      <span>Create Account</span>
-    </a>
-  </li>
-  
+        <li hlmNavigationMenuItem>
+            <button hlmNavigationMenuTrigger>
+                <a hlmSidebarMenuButton routerLink="/deposit">
+                    Deposit
+                </a>
+            </button>
+        </li>
+        <li hlmNavigationMenuItem>
+            <button hlmNavigationMenuTrigger>
+                <a hlmSidebarMenuButton routerLink="/withdrawal">
+                    Withdrawal
+                </a>
+            </button>
+        </li>
+        <li hlmNavigationMenuItem>
+            <button hlmNavigationMenuTrigger>
+                <a hlmSidebarMenuButton routerLink="/transfer">
+                    Transfer
+                </a>
+            </button>
+        </li>
     </ul>
 </nav>

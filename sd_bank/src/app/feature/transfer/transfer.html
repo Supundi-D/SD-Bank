@@ -18,8 +18,33 @@
                     <label hlmLabel for="amount">Enter Amount</label>
                     <input type="number" id="amount" required hlmInput />
                 </div>
+                <brn-input-otp hlmInputOtp maxLength="4"  inputClass="disabled:cursor-not-allowed grid gap-2">
+                    <label hlmLabel for="otp">Enter OTP</label>
+                    <div hlmInputOtpGroup>
+                        <hlm-input-otp-slot index="0" />
+                        <hlm-input-otp-slot index="1" />
+                        <hlm-input-otp-slot index="2" />
+                        <hlm-input-otp-slot index="3" />
+                    </div>
+            
+                </brn-input-otp>
             </div>
         </form>
+    </div>
+
+   
+    <div className="flex w-full max-w-xs flex-col gap-4 [--radius:1rem]">
+        <div hlmItem variant="muted">
+            <hlm-item-media>
+                <hlm-spinner />
+            </hlm-item-media>
+            <hlm-item-content>
+                <div hlmItemTitle class="line-clamp-1">Processing payment...</div>
+            </hlm-item-content>
+            <hlm-item-content>
+                <span class="text-sm tabular-nums">**</span>
+            </hlm-item-content>
+        </div>
     </div>
 
     <div hlmCardFooter class="flex-col gap-2">

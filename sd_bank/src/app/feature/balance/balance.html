@@ -1,0 +1,15 @@
+<hlm-alert-dialog>
+    <button id="edit-profile" hlmAlertDialogTrigger hlmBtn variant="outline">Show Balance</button>
+    <hlm-alert-dialog-content *brnAlertDialogContent="let ctx">
+        <hlm-alert-dialog-header>
+            <h2 hlmAlertDialogTitle>Your Balance in SD Bank Savings Account</h2>
+            <p hlmAlertDialogDescription>
+                LKR.
+            </p>
+        </hlm-alert-dialog-header>
+        <hlm-alert-dialog-footer>
+            <button hlmAlertDialogCancel (click)="ctx.close()">Cancel</button>
+            <button hlmAlertDialogAction (click)="navigateToDepoit()">Deposit</button>
+        </hlm-alert-dialog-footer>
+    </hlm-alert-dialog-content>
+</hlm-alert-dialog>
