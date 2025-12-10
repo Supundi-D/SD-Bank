@@ -48,13 +48,13 @@ export class Table  {
 			Amount: 'LKR 10000',
 		},
     {
-			invoice: '2025-11-20',
+			invoice: '2025-11-26',
 			Deposit: 'LKR 10000',
 			Withdrawal: '',
 			Amount: 'LKR 20000',
 		},
     {
-			invoice: '2025-11-20',
+			invoice: '2025-11-27',
 			Deposit: '',
 			Withdrawal: 'LKR 15000',
 			Amount: 'LKR 5000',

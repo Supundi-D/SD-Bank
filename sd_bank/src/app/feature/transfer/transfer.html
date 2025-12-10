@@ -11,8 +11,18 @@
                     <input type="text" id="name" required hlmInput />
                 </div>
                 <div class="grid gap-2">
-                    <label hlmLabel for="transfer">Enter Transfer Persons Name</label>
-                    <input type="text" id="transfer" required hlmInput />
+                    <label hlmLabel for="transfer">Enter Receiver's Name</label>
+                    <brn-select class="inline-block" placeholder="Select an option">
+                        <hlm-select-trigger class="w-56">
+                            <hlm-select-value />
+                        </hlm-select-trigger>
+                        <hlm-select-content>
+                            <hlm-option value="1">Supundi</hlm-option>
+                            <hlm-option value="2">Dinaya</hlm-option>
+                            <hlm-option value="3">Sewmi</hlm-option>
+                            <hlm-option value="4">Senarath</hlm-option>
+                        </hlm-select-content>
+                    </brn-select>
                 </div>
                 <div class="grid gap-2">
                     <label hlmLabel for="amount">Enter Amount</label>
@@ -42,7 +52,7 @@
                 <div hlmItemTitle class="line-clamp-1">Processing payment...</div>
             </hlm-item-content>
             <hlm-item-content>
-                <span class="text-sm tabular-nums">**</span>
+                <span class="text-sm tabular-nums">{{transfer.amount}}</span>
             </hlm-item-content>
         </div>
     </div>

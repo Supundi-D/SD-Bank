@@ -3,7 +3,7 @@ import { MyAccount } from "./feature/my-account/my-account";
 import { ThemeService } from './core/service/theme.service';
 import { Login } from "./feature/login/login";
 import { CreateAccount } from "./feature/create-account/create-account";
-import {hlmH1} from '@spartan-ng/helm/typography';
+import { hlmH1 } from '@spartan-ng/helm/typography';
 import { Deposit } from "./feature/deposit/deposit";
 import { RouterOutlet } from '@angular/router';
 import { Withdrawal } from "./feature/withdrawal/withdrawal";

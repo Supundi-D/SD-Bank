@@ -1,5 +1,5 @@
 import { Component, computed, signal } from '@angular/core';
-import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms'
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'
 import { HlmCardImports } from '@spartan-ng/helm/card'
 import { HlmLabelImports } from '@spartan-ng/helm/label'
 import { HlmInputImports } from '@spartan-ng/helm/input'
@@ -15,20 +15,29 @@ import { HlmFormFieldImports } from '@spartan-ng/helm/form-field'
   styleUrl: './create-account.css',
 })
 export class CreateAccount {
-  public control = new FormControl('', Validators.required);
-  
-  
 
-  // private readonly _options: string[] = [
-  //   'Nugegoda',
-  //   'Kandy',
-  //   'Colombo'
-  // ];
+  createFormGroup!: FormGroup;
 
-  // public readonly search = signal('');
+  constructor(private formBuilder: FormBuilder){
+    this.initiateForm()
+  }
 
-  // public readonly filteredOptions = computed(() =>
-  //   this._options.filter((option) => option.toLowerCase().includes(this.search().toLowerCase())),
-  // );
+  initiateForm(){
+    this.createFormGroup = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
+      branch: ['', [Validators.required]]
+    })
+  }
+
+  submitForm() {
+    if (!this.createFormGroup.valid){
+      alert("All fields are required");
+      return;
+    }
+
+    console.log(this.createFormGroup.value);
+
+    }
 }
 
