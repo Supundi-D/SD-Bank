@@ -14,6 +14,10 @@ export const routes: Routes = [
         loadComponent: () => import('./feature/balance/balance').then(m => m.Balance),
     },
     {
+        path: 'table',
+        loadComponent: () => import('./feature/balance/table/table').then(m => m.Table),
+    },
+    {
         path: 'deposit',
         loadComponent: () => import('./feature/deposit/deposit').then(m => m.Deposit),
     },
