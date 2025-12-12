@@ -4,7 +4,7 @@
         <p hlmCardDescription>Welcome To SD Bank</p>
     </div>
 
-    <div hlmCardContent >
+    <div hlmCardContent>
         <form [formGroup]="createFormGroup" (ngSubmit)="submitForm()">
             <div class="flex flex-col gap-6">
                 <div class="grid gap-2">
@@ -29,7 +29,7 @@
                         <option value="nugegoda">Nugegoda</option>
                         <option value="colombo">Colombo</option>
                         <option value="colombo">Kandy</option>
-                      </select>
+                    </select>
                 </div>
 
                 <button hlmBtn type="submit" class="w-full">Create</button>
@@ -38,6 +38,37 @@
         </form>
     </div>
 
-    <div hlmCardFooter class="flex-col gap-2">
-    </div>
+    <button hlmBtn (click)="ShowLogin()" class="w-full ">Show Login</button>
+    <!-- <div class="flex items-center text-center">
+        @if (savedLogin){
+        Email:{{ savedLogin.email }} <br>
+        Branch:{{ savedLogin.branch }}<br>
+        Password: {{ savedLogin.password }}
+        }
+    </div> -->
+
+
+
+<div hlmTableContainer class="w-full">
+    <table hlmTable>
+        <thead hlmTHead>
+            <tr hlmTr>
+                <th hlmTh>Email</th>
+                <th hlmTh>Password</th>
+                <th hlmTh>Branch</th>
+            </tr>
+        </thead>
+
+       @if (_savedLogin) {
+        @for (login of _savedLogin; track login) {
+            <tr hlmTr>
+                <td hlmTd>{{ login.email }}</td>
+                <td hlmTd>{{ login.password }}</td>
+                <td hlmTd>{{ login.branch }}</td>
+            </tr>
+            }
+       }
+    </table>
+</div>
+
 </section>
